@@ -140,6 +140,8 @@ nav ul{
 }
 
 .first-item {
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--basic-sky-blue);
 }
 
@@ -159,6 +161,7 @@ nav ul{
 .features-block{
   width: 400px;
   text-align: center;
+
   background-color: var(--basic-sky-blue);
   color: var(--basic-white);
 }
@@ -234,7 +237,7 @@ flex-direction: column;
 .text:active {
 }
 
-.button-info {
+.button-info-index {
   color: var(--basic-white);
   background-color: var(--basic-light-brown);
   font-weight: bold;
@@ -362,6 +365,10 @@ font-size: inherit;
   display: inline-block;
 }
 
+.findings ul{
+  padding: 0;
+}
+
 .findings li{
   display: grid;
     padding: 0;
@@ -382,17 +389,33 @@ font-size: inherit;
 .findings-item-info{
   }
 
-.button-info{
+.button-info-catalog{
+  color: var(--basic-white);
   font-weight: bold;
-font-size: 14px;
-line-height: 21px;
+  font-size: 14px;
+  line-height: 21px;
   background-color: var(--basic-sky-blue)
 }
 
 .button-bron{
   color: var(--basic-white);
   font-weight: bold;
-font-size: 14px;
-line-height: 21px;
+  font-size: 14px;
+  line-height: 21px;
   background-color: var(--basic-light-brown)
+}
+
+/* -----Лишние обозначение-----*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
