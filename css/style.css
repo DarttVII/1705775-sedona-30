@@ -370,9 +370,11 @@ font-size: inherit;
 }
 
 .findings li{
-  display: grid;
-    padding: 0;
-    grid-template-columns: repeat(3,400px);
+  display: flex;
+  flex-direction: row;
+  padding: 30px 73px;
+
+
 
 }
 
@@ -383,10 +385,15 @@ font-size: inherit;
 }
 
 .findings-item img {
-
+  height: 90px;
+  width: 135px;
 }
 
 .findings-item-info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 3;
   }
 
 .button-info-catalog{
@@ -394,7 +401,8 @@ font-size: inherit;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  background-color: var(--basic-sky-blue)
+  background-color: var(--basic-sky-blue);
+  width: 110px;
 }
 
 .button-bron{
@@ -402,7 +410,8 @@ font-size: inherit;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  background-color: var(--basic-light-brown)
+  background-color: var(--basic-light-brown);
+  width: 142px;
 }
 
 /* -----Лишние обозначение-----*/
