@@ -31,8 +31,6 @@ body {
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-extra-light-grey);
-
-
 }
 
 a {
@@ -42,7 +40,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-
 }
 
 /*GRID*/
@@ -70,8 +67,6 @@ img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
-
 }
 
 nav ul{
@@ -85,7 +80,6 @@ nav ul{
   padding: 15px 72px;
   margin-bottom: 0;
   margin-top: 0;
-
 }
 
 .site-navigation li {
@@ -118,13 +112,11 @@ nav ul{
 
 
 .main-promo {
-
   text-align: center;
 }
 
 .introduction {
   text-align: center;
-
   font-weight: bold;
   font-size: 21px;
   line-height: 36px;
@@ -142,7 +134,6 @@ nav ul{
 
 .features-list {
   display: flex;
-
   flex-wrap: wrap;
   text-align: center;
   padding: 0;
@@ -308,16 +299,20 @@ flex-direction: column;
   line-height: 26px;
 }
 
+
+
 /*---------- CATALOG ------------*/
+
 
 .filtres {
   background-color: var(--basic-sky-blue);
+
 }
 .filtres-form {
   font-size: 16px;
   color: var(--basic-white);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
 }
 
 .filtres-form div:nth-child(1),
@@ -327,12 +322,19 @@ flex-direction: column;
 
 .filtres-form div:nth-child(3) {
   text-align: center;
-}
+  }
 
 .filtres-submit {
 }
 
 .filtres-item {
+  display: flex;
+  flex-direction: column;
+  padding: 27px 72px;
+}
+
+.filtres-form div:nth-child(3){
+
 }
 
 .filtres-item h3 {
