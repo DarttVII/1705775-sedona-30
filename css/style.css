@@ -239,17 +239,57 @@ padding: 12px 60px 45px;
 
 .features-subtype{
   width: 400px;
-  padding-top: 55px;
   padding-bottom: 65px;
   background-color: var(--basic-white);
 }
 
+/*.features-under li:nth-child(1){
+  background-image: url(../img/house.svg);
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
 .features-subtype h4{
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
 
 }
+
+.features-subtype h4:nth-child(1)::before{
+  content: "";
+  background-image: url(../img/house.svg);
+  background-repeat: no-repeat;
+  width:75px;
+  height:72px;
+  margin: 30px auto 30px;
+}
+
+.features-subtype h4:nth-child(2)::before{
+  content: "";
+  background-image: url(../img/burger.svg);
+  background-repeat: no-repeat;
+  width:75px;
+  height:72px;
+  margin: 30px auto 30px;
+}
+
+.features-subtype h4:nth-child(3)::before{
+  content: "";
+  background-image: url(../img/gift.svg);
+  background-repeat: no-repeat;
+  width:75px;
+  height:72px;
+  margin: 30px auto 30px;
+}
+
+
+
+
 
 .features-subtype p{
   padding-left: 55px;
