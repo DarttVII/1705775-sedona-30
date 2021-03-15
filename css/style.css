@@ -131,7 +131,6 @@ nav ul{
 
 .introduction h2 {
   line-height: 26px;
-  font-weight: 400;
   margin: 0;
   font-weight: 700;
 }
@@ -177,6 +176,7 @@ nav ul{
 
 .features-block,
 .third-item{
+  text-align: center;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -184,17 +184,14 @@ nav ul{
 }
 
 .features-block{
-    text-align: center;
   background-color: var(--basic-sky-blue);
   color: var(--basic-white);
 }
 
 .features-block h3,
 .third-item h3 {
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
 }
 
 .features-block h3{
@@ -203,23 +200,14 @@ nav ul{
 }
 
 .features-block span{
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
   padding-top: 2px;
 }
 
 .features-block p{
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 21px;
 padding: 12px 48px 0px;
 }
 
 .third-item{
-  text-align: center;
   background-color: var(--basic-light-grey);
 }
 
@@ -254,40 +242,31 @@ padding: 12px 60px 45px;
   flex-direction: column;
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
+
+}
+
+.features-subtype h4::before{
+  content: "";
+  background-repeat: no-repeat;
+  width:77px;
+  height:77px;
+  margin: 30px auto 30px;
 
 }
 
 .features-subtype:nth-child(1) h4::before{
-  content: "";
   background-image: url(../img/house.svg);
-  background-repeat: no-repeat;
-  width:75px;
-  height:72px;
-  margin: 30px auto 30px;
 }
 
 .features-subtype:nth-child(2) h4::before{
-  content: "";
+
   background-image: url(../img/burger.svg);
-  background-repeat: no-repeat;
-  width:75px;
-  height:72px;
-  margin: 30px auto 30px;
+
 }
 
 .features-subtype:nth-child(3) h4::before{
-  content: "";
   background-image: url(../img/gift.svg);
-  background-repeat: no-repeat;
-  width:75px;
-  height:75px;
-  margin: 30px auto 40px;
 }
-
-
-
-
 
 .features-subtype p{
   padding-left: 55px;
@@ -305,7 +284,6 @@ padding: 12px 60px 45px;
 
 .form-wrapper{
 }
-
 
 .appointment {
   text-align: center;
@@ -339,11 +317,7 @@ margin: 0;
 .appointment-form div:nth-child(4){
 }
 
-
-
-
 .appointment-item {
-
 }
 
 .appointment-datain {
@@ -433,7 +407,6 @@ margin: 0;
   display: flex;
   flex-direction: row;
   justify-content:space-around;
-
   padding-top: 5px;
 }
 
@@ -452,8 +425,8 @@ margin: 0;
 
 .filtres {
   background-color: var(--basic-sky-blue);
-
 }
+
 .filtres-form {
   font-size: 16px;
   color: var(--basic-white);
@@ -468,7 +441,7 @@ margin: 0;
 
 .filtres-form div:nth-child(3) {
   text-align: center;
-  }
+}
 
 .filtres-submit {
 }
@@ -480,7 +453,6 @@ margin: 0;
 }
 
 .filtres-form div:nth-child(3){
-
 }
 
 .filtres-item h3 {
