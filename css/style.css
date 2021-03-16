@@ -12,11 +12,14 @@
 --basic-dark-brown: #604E43;
 --basic-extra-dark-brown: #503E33;
 
+--special-button-border: #E5E5E5;
 --special-grey: #A9A9A9;
 --special-dark-grey: #666666;
 --special-light-grey: #CACACA;
 --special-grey: #A9A9A9;
 --special-normal-grey: #888888;
+--special-footer-background: rgba(255, 255, 255, 0.9);
+--special-box-shadow: rgba(0, 1, 1, 0.2);
 }
 
 body {
@@ -53,7 +56,7 @@ img {
   background-color: var(--basic-white);
   margin: 0 auto;
   min-height: 100%;
-
+  box-shadow: 0px 5px 15px var(--special-box-shadow);
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -113,8 +116,10 @@ nav ul{
 
 .main-promo {
   text-align: center;
-  background-image: url("../img/background-index.jpg");
+  background-image: url("../img/shape.svg"),
+  url("../img/background-index.jpg");
   background-repeat: no-repeat;
+  background-position: bottom,center;
   background-color: var(--basic-sky-blue);
   min-height: 500px;
 }
@@ -125,7 +130,7 @@ nav ul{
 
 .introduction {
   text-align: center;
-  padding-top: 42px;
+  padding-top: 51px;
   margin: 0;
 }
 
@@ -138,8 +143,8 @@ nav ul{
 .introduction p {
   line-height: 26px;
   font-weight: 400;
-  padding-top: 46px;
-  padding-bottom: 37px;
+  padding-top: 44px;
+  padding-bottom: 51px;
   margin: 0;
 }
 
@@ -154,6 +159,7 @@ nav ul{
   flex-wrap: wrap;
   text-align: center;
   padding: 0;
+  margin: 0;
 }
 
 .first-item {
@@ -178,14 +184,13 @@ nav ul{
 .third-item{
   text-align: center;
   width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
 }
 
 .features-block{
   background-color: var(--basic-sky-blue);
   color: var(--basic-white);
+  padding-top: 46px;
 }
 
 .features-block h3,
@@ -207,12 +212,16 @@ nav ul{
 padding: 12px 48px 0px;
 }
 
+.second-item h3{
+  /*padding: 0px 120px 13px;*/
+}
+
 .third-item{
   background-color: var(--basic-light-grey);
 }
 
 .third-item h3{
-  padding: 47px 140px 25px;
+  padding: 45px 137px 24px;
   margin: 0;
 }
 
@@ -220,12 +229,12 @@ padding: 12px 48px 0px;
 }
 
 .third-item p{
-padding: 12px 60px 45px;
+padding: 12px 60px 40px;
 }
 
 .features-subtype{
   width: 400px;
-  padding-bottom: 65px;
+  padding-bottom: 68px;
   background-color: var(--basic-white);
 }
 
@@ -242,6 +251,7 @@ padding: 12px 60px 45px;
   flex-direction: column;
   font-weight: bold;
   font-size: 21px;
+  margin-top: 22px;
 
 }
 
@@ -250,7 +260,7 @@ padding: 12px 60px 45px;
   background-repeat: no-repeat;
   width:77px;
   height:77px;
-  margin: 30px auto 30px;
+  margin: 35px auto 25px;
 
 }
 
@@ -282,17 +292,25 @@ padding: 12px 60px 45px;
 .second-item img {
 }
 
-.form-wrapper{
-}
-
 .appointment {
+  position: relative;
   text-align: center;
 }
 .appointment h2 {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
-  padding-top: 30px;
+  padding: 30px 22px 9px 12px;
+}
+
+.form-wrapper{
+  position: absolute;
+  width: 568px;
+  left: 50%;
+  background-color: var(--basic-white);
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding: 50px 0px 46px;
 }
 
 .appointment-form{
@@ -300,24 +318,8 @@ padding: 12px 60px 45px;
   flex-direction: column;
 }
 
-.appointment-info p{
-  font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 24px;
-padding-top: 20px;
-margin: 0;
-}
-
-.appointment-form div:nth-child(1),
-.appointment-form div:nth-child(2){
-}
-
-.appointment-form div:nth-child(3),
-.appointment-form div:nth-child(4){
-}
-
-.appointment-item {
+.appointment-info {
+  line-height: 24px;
 }
 
 .appointment-datain {
@@ -326,12 +328,30 @@ margin: 0;
 }
 
 .text {
+  box-sizing: border-box;
+  width: 346px;
+  padding: 9px 13px;
+  margin-left: 22px;
+  text-transform: uppercase;
+  font-weight: inherit;
+  line-height: 26px;
   background-color: var(--basic-extra-light-grey);
+  border: 2px solid var(--basic-extra-light-grey);
 }
 
-.text:hover,
-.text:focus {
+.text::placeholder {
+  color: var(--basic-black);
+}
+
+.text:hover {
   background-color: var(--light-grey-place);
+  border: 2px solid var(--light-grey-place);
+}
+
+.text:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--special-button-border);
+  outline: none;
 }
 
 .text:active {
@@ -344,6 +364,13 @@ margin: 0;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
+  border: none;
+
+  margin-top: 30px;
+  box-sizing: border-box;
+  width: 568px;
+  padding: 30px 15px 30px 15px;
+  text-transform: uppercase;
 }
 
 .button-info:hover,
@@ -362,7 +389,7 @@ margin: 0;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  margin: 0 auto;
+
 }
 
 .button-find:active {
@@ -370,8 +397,20 @@ margin: 0;
 }
 
 .appointment-item {
+  position: relative;
   font-weight: bold;
   line-height: 26px;
+  padding: 0px 0px 19px 0px;
+}
+
+.parents,
+.childs {
+  width: 50%;
+}
+
+.input-parents,
+.input-childs {
+  width: 38px;
 }
 
 .button {
@@ -381,10 +420,28 @@ margin: 0;
 }
 
 .calendar {
-  background-color: var(--special-dark-grey);
-  font-weight: bold;
-  line-height: 26px;
+  position: absolute;
+  right: 64px;
+  top: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  }
+
+.calendar:focus path,
+.calendar:hover path {
+  fill: var(--basic-black);
 }
+
+.calendar:active path {
+  fill: var(--basic-sky-blue);
+}
+
+.calendar:focus {
+  outline: none;
+}
+
+
 
 .map {
   text-align: center;
@@ -393,32 +450,75 @@ margin: 0;
 .main-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--special-footer-background);
+  margin-top: -121px;
 }
 
 .contacts {
   text-decoration: none;
+  text-align: center;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  margin-left: 75px;
   }
+
+.contacts p:first-child{
+  margin-top: 17px;
+  margin-bottom: 10px;
+}
+
+.contacts-phone{
+  margin-top: 10px;
+  margin-bottom: 36px;
+}
+
+.contacts-phone a{
+  color: var(--basic-black);
+}
 
 .social ul {
   list-style: none;
+  justify-content: center;
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
-  padding-top: 5px;
+  padding: 0 ;
+  margin-top: 31px;
 }
 
-.social li{
+.social-button{
   display: flex;
-  justify-content: space-between;
   background-color: var(--basic-sky-blue);
-  height: 26px;
-  width: 28px;
-  padding: 16px;
+  height: 28px;
+  width: 26px;
+  padding: 10px;
+  margin-right: 6px;
 }
 
+.twitter {
+  margin-left: 7px;
+}
+
+.social-button img{
+  margin: auto;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 75px;
+}
+
+.footer-copyright p{
+  display: flex;
+  align-items: center;
+}
+
+.footer-copyright a{
+  margin-left: 8px;
+}
 
 /*---------- CATALOG ------------*/
 
