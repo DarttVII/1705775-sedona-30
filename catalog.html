@@ -22,7 +22,7 @@
             <li><a href="blank.html">Информация</a></li>
             <li><a href="photo.html">Фото и Видео</a></li>
             <li><a href="map.html">Карта штата</a></li>
-            <li><a href="catalog.html">Гостиницы</a></li>
+            <li><a class="active" href="catalog.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -31,45 +31,61 @@
         <section class="filtres">
           <h2 class="visually-hidden">Фильтры для отелей</h2>
           <form class="filtres-form">
-            <div class="filtres-item">
+            <div class="filtres-item infrastructure">
               <h3>Инфраструктура:</h3>
-                <input class="filtres-pool" type="checkbox" name="pool" id="pool" checked>
-                <label for="pool">Бассейн</label>
-                <input class="filtres-parking" type="checkbox" name="parking" id="parking">
-                <label for="parking">Парковка</label>
-                <input class="filtres-wifi" type="checkbox" name="wifi" id="wifi">
-                <label for="wifi">Wi-Fi</label>
+                <input class="filter-input visually-hidden" type="checkbox" name="pool" id="pool" checked disabled>
+                <label class="filter-input-label" for="pool">Бассейн</label>
+                <input class="filter-input visually-hidden" type="checkbox" name="parking" id="parking">
+                <label class="filter-input-label" for="parking">Парковка</label>
+                <input class="filter-input visually-hidden" type="checkbox" name="wifi" id="wifi" disabled>
+                <label class="filter-input-label" for="wifi">Wi-Fi</label>
             </div>
-            <div class="filtres-item">
+            <div class="filtres-item type">
               <h3>Тип жилья:</h3>
-                <input class="filtres-hostel" type="checkbox" name="hostel" id="hostel" checked>
-                <label for="hostel">Гостиница</label>
-                <input class="filtres-motel" type="checkbox" name="motel" id="motel" checked>
-                <label for="motel">Мотель</label>
-                <input class="filtres-apartments" type="checkbox" name="apartments" id="apartments" checked>
-                <label for="apartments">Апартаменты</label>
+                <input class="filter-input visually-hidden" type="checkbox" name="hostel" id="hostel" checked>
+                <label class="filter-input-label" for="hostel">Гостиница</label>
+                <input class="filter-input visually-hidden" type="checkbox" name="motel" id="motel" checked>
+                <label class="filter-input-label" for="motel">Мотель</label>
+                <input class="filter-input visually-hidden" type="checkbox" name="apartments" id="apartments" checked>
+                <label class="filter-input-label" for="apartments">Апартаменты</label>
             </div>
-            <div class="filtres-item">
-              <h3>Стоимость в сутки (р):</h3>
-                <span>От:</span>
-                <span>До:</span>
-                <input class="filtres-range" type="range" min="0" max="4000" step="1" value="3000">
-                <button class="filtres-submit" type="submit" name="submit">Показать</button>
+            <div class="filter-range cost">
+              <div class="filter-range-title">Стоимость в сутки (р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
             </div>
           </form>
         </section>
         <section class="result">
           <h2 class="visually-hidden">Данные найденных значений</h2>
           <p class="result-info">Найдено: 3</p>
-          <p>Сортировка</p>
+          <p class="result-sort">Сортировка</p>
             <ul>
-              <li class="result-value"><a href="#">По цене:</a></li>
-              <li class="result-value"><a href="#">По типу:</a></li>
-              <li class="result-value"><a href="#">По рейтингу</a></li>
+              <li class="result-value-cost"><a href="#">По цене</a></li>
+              <li class="result-value-type"><a href="#">По типу</a></li>
+              <li class="result-value-rating"><a href="#">По рейтингу</a></li>
             </ul>
           <div class="pushbuttons">
-            <button class="button" type="button" name="plus">+</button>
-            <button class="button" type="button" name="minus">-</button>
+            <button class="button-sort up" type="button" name="plus">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+              </svg>
+            </button>
+            <button class="button-sort down" type="button" name="minus">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+              </svg>
+            </button>
           </div>
         </section>
 
@@ -86,7 +102,7 @@
                     <button class="button-bron" type="button" name="bron">Забронировать</button>
                   </div>
                   <div class="findings-item-rating">
-                    <span>Звездочки рейтинга 4</span>
+                    <span></span>
                     <p>Рейтинг:8,5</p>
                   </div>
               </li>
@@ -100,7 +116,7 @@
                     <button class="button-bron" type="button" name="bron">Забронировать</button>
                   </div>
                   <div class="findings-item-rating">
-                    <span>Звездочки рейтинга 3</span>
+                    <span></span>
                     <p>Рейтинг:8,9</p>
                   </div>
               </li>
@@ -114,29 +130,45 @@
                     <button class="button-bron" type="button" name="bron">Забронировать</button>
                   </div>
                   <div class="findings-item-rating">
-                    <span>Звездочки рейтинга</span>
+                    <span></span>
                     <p>Рейтинг:9,2</p>
                   </div>
               </li>
             </ul>
         </section>
       </main>
-      <footer class="main-footer">
+      <footer class="main-footer footer-catalog">
         <div class="contacts">
           <p>#VISITSEDONA</p>
-          <p>Тел: <a href="tel:+79647151473">+7 (964) 715 14 73</a></p>
+          <p class="contacts-phone">Тел: <a href="tel:+74956660166">+7 (495) 666-01-66</a></p>
         </div>
 
         <div class="social">
           <ul>
-            <li class="social-button"><a href="#"></a></li>
-            <li class="social-button"><a href="#"></a></li>
-            <li class="social-button"><a href="#"></a></li>
+            <li>
+              <a class="social-button twitter" href="#">
+                <img src="img/twitter.svg" width="17" height="17" alt="twitter">
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/fb-icon.svg" width="12" height="22" alt="facebook">
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/youtube.svg" width="20" height="16" alt="youtube">
+              </a>
+            </li>
           </ul>
         </div>
 
         <div class="footer-copyright">
-          <p>Web site by<a class="button" href="https://htmlacademy.ru/intensive/htmlcss"></a></p>
+          <p>Website by
+            <a class="" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/logo-htmlacademy.svg" width="114" height="40" alt="htmlacademy">
+            </a>
+          </p>
         </div>
 
       </footer>
