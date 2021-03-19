@@ -140,14 +140,14 @@ nav ul{
   color: var(--basic-sky-blue);
 }
 
-.site-navigation a:active,
+.site-navigation a:active {
+  color: var(--basic-light-brown);
+}
+
 .findings-item-name:active {
   color: var(--special-black-text);
 }
 
-.site-navigation a:visited{
-  color: var(--basic-light-brown);
-}
 
 
 .main-promo {
@@ -410,6 +410,7 @@ padding: 12px 48px 0px;
   background-color: var(--basic-extra-dark-brown);
   border: none;
   outline: none;
+  color: var(--special-white-text);
 }
 
 .button-find {
@@ -736,7 +737,7 @@ padding: 12px 48px 0px;
 }
 
 .price-controls .max-price {
-  padding-right: 20px
+  padding-right: 20px;
 }
 
 .price-controls input {
@@ -795,7 +796,7 @@ padding: 12px 48px 0px;
   display: block;
   margin: 0 auto;
   margin-left: 83px;
-  padding: 6px 30px;
+  padding: 6px 34px;
   font-size: 14px;
   line-height: 20px;
   color: var(--basic-white);
