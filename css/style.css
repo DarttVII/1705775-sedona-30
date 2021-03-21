@@ -141,7 +141,11 @@ nav ul{
 }
 
 .site-navigation a:active {
-  color: var(--basic-light-brown);
+  color: var(--special-black-text);
+}
+
+.active {
+  color: var(--basic-light-brown) !important;
 }
 
 .findings-item-name:active {
@@ -825,6 +829,7 @@ padding: 12px 48px 0px;
   flex-direction: row;
   padding: 19px 73px 15px 73px;
   align-items: center;
+
 }
 
 .result-info {
@@ -843,50 +848,32 @@ padding: 12px 48px 0px;
   padding: 0;
   margin-left: 42px;
   margin-right: 42px;
+  list-style: none;
 }
 
-.result-value-cost,
-.result-value-type,
-.result-value-rating {
+.result-value {
   font-size: 12px;
   line-height: 18px;
-  list-style: none;
   margin-right: 33px;
+  color: var(--special-black-text);
+  border-bottom: 1px dotted var(--basic-sky-blue);
 }
 
-.result-value-cost a{
+.result-value-active {
   color: var(--basic-sky-blue);
-}
-
-.result-value-type a,
-.result-value-rating a{
-  opacity: 0.3;
-  color: var(--basic-sky-blue);
-  border-bottom:1px dotted var(--basic-sky-blue);
-}
-
-.result-value-cost:active a,
-.result-value-type:active a,
-.result-value-rating:active a,
-.result-value-cost:hover a,
-.result-value-type:hover a,
-.result-value-rating:hover a{
+  border-bottom-style: none;
   opacity: 1;
 }
 
-
-.result-value-cost:hover a,
-.result-value-type:hover a,
-.result-value-rating:hover a {
+.result-value:hover {
   color: var(--basic-sky-blue);
-    border-bottom:1px dotted var(--basic-sky-blue);
+  opacity: 1;
 }
 
-.result-value-cost:active a,
-.result-value-type:active a,
-.result-value-rating:active a {
+.result-value:active {
   color: var(--basic-black);
   border-bottom-style: none;
+  opacity: 1;
 }
 
 .button-sort{
@@ -920,7 +907,7 @@ padding: 12px 48px 0px;
   margin-top: 7px;
 }
 
-.findings li{
+.findings-item{
   display: flex;
   flex-direction: row;
   padding: 25px 74px 28px 74px;
@@ -939,11 +926,6 @@ padding: 12px 48px 0px;
   grid-template-rows: 150px 150px 150px;
 }
 
-.findings-item {
-  list-style: none;
-  padding: 0;
-  position: relative;
-}
 
 .findings-item img {
   height: 90px;
