@@ -144,8 +144,8 @@ nav ul{
   color: var(--special-black-text);
 }
 
-.active {
-  color: var(--basic-light-brown) !important;
+.site-navigation .active {
+  color: var(--basic-light-brown);
 }
 
 .findings-item-name:active {
